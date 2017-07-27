@@ -1,3 +1,4 @@
+/* Home */
 .parallax-container {
   min-height: 380px;
   line-height: 0;
@@ -9,4 +10,13 @@
   .parallax-container {
     min-height: 480px;
   }
+}
+
+/* About */
+.about-header {
+  min-height: 550px;  
+  background: url('../images/sobre-img.jpg');  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
 }
