@@ -4,3 +4,9 @@
   height: auto;
   color: rgba(255,255,255,.9);
 }
+
+@media(min-width: 968px) {
+  .parallax-container {
+    min-height: 480px;
+  }
+}
