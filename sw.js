@@ -1,4 +1,4 @@
-var cacheName = 'femugpe-wpa-1-7';
+var cacheName = 'femugpe-wpa-1-9';
 var filesToCache = [
   '/',
   'index.html',
