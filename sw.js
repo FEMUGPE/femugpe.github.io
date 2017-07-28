@@ -1,5 +1,5 @@
-var cacheName = 'femugpe-wpa-1-9';
-var filesToCache = [
+let cacheName = 'femugpe-wpa-v1';
+let filesToCache = [
   '/',
   'index.html',
   'sobre.html',
@@ -36,9 +36,10 @@ var filesToCache = [
   'fonts/roboto/Roboto-Thin.woff2',
 ];
 
-self.addEventListener('install', e => {
+//Instala no serviceWorker os arquivos que ficaram no cache
+self.addEventListener('install', event => {
   console.log('[ServiceWorker] Install');
-  e.waitUntil(
+  event.waitUntil(
     caches.open(cacheName)
     .then(cache => {
       console.log('[ServiceWorker] Caching app shell');
@@ -51,9 +52,10 @@ self.addEventListener('install', e => {
   );
 });
 
-self.addEventListener('activate', function(e) {
+//Trata os arquivos em caches que foram modificados e assim 
+self.addEventListener('activate', event => {
   console.log('[ServiceWorker] Activate');
-  e.waitUntil(
+  event.waitUntil(
     caches.keys().then(keyList => {
       return Promise.all(keyList.map(function(key) {
         if (key !== cacheName) {
@@ -63,12 +65,17 @@ self.addEventListener('activate', function(e) {
       }));
     })
   );
+  //Lista dos os eventos de fetch da página
   return self.clients.claim();
 });
 
-self.addEventListener('fetch', e => {
-  e.respondWith(
-    caches.match(e.request)
-    .then(response => response || fetch(e.request))
-  )
+//Aqui é que tudo acontece você consegue tratar qualquer requiste mesmo sendo de outra origin
+//Com o evento feth pode dizer qual tipo de resposte, se vai ser do cache ou da network
+self.addEventListener('fetch', event => {
+  console.log('[SW] fetch ' + event.request.url)
+  event.respondWith(
+    caches.match(event.request).then(function(response){
+      return response || fetch(event.request.clone());
+    })
+  );
 });

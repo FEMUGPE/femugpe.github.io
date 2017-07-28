@@ -22,8 +22,10 @@ p {
     width: 100%;
 }
 
-.logo-femugpe {
-  max-width: 60%;
+@media(max-width: 922px) {
+  .logo-femgupe {
+    max-width: 150px !important;
+  }
 }
 
 @media(min-width: 922px) {
