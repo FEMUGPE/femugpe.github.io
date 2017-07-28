@@ -1,0 +1,16 @@
+{
+  "short_name": "FEMGU-PE",
+  "name": "FEMGU-PE - PWA",
+  "icons": [
+    {
+      "src": "images/icon.png",
+      "size": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#2196F3",
+  "background_color": "#299cf7"
+}
