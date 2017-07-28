@@ -1,5 +1,5 @@
-let cacheName = 'femugpe-wpa-1-3';
-let filesToCache = [
+var cacheName = 'femugpe-wpa-1-7';
+var filesToCache = [
   '/',
   'index.html',
   'sobre.html',
@@ -36,34 +36,32 @@ let filesToCache = [
   'fonts/roboto/Roboto-Thin.woff2',
 ];
 
-// dev only
-if (typeof files == 'undefined') {
-  var files = [];
-} else {
-  files.push('./');
-}
-
 self.addEventListener('install', e => {
-  console.log('[ServiceWorker]: instalado');
+  console.log('[ServiceWorker] Install');
   e.waitUntil(
     caches.open(cacheName)
-    .then(cache => cache.addAll(filesToCache))
-    .catch(() => self.skipWaiting())
-  )
+    .then(cache => {
+      console.log('[ServiceWorker] Caching app shell');
+      return cache.addAll(filesToCache);
+    })
+    .then(() => {
+      return self.skipWaiting();
+    })
+
+  );
 });
 
-self.addEventListener('activate', e => {
-  console.log('[ServiceWorker] Activado');
+self.addEventListener('activate', function(e) {
+  console.log('[ServiceWorker] Activate');
   e.waitUntil(
-    caches.keys()
-    .then(keyList => Promise.all(keyList.map(key => {
-      console.log(key, cacheName);
-      if(key !== cacheName) {
-        console.log('[ServiceWorker] Removing old cache', key);
-        return caches.delete(key);
-      }
+    caches.keys().then(keyList => {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
     })
-    ))
   );
   return self.clients.claim();
 });
