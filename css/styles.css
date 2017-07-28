@@ -1,21 +1,54 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+p {
+  line-height: 2rem;
+}
+
 /* Home */
 .parallax-container {
-  min-height: 380px;
+  min-height: 280px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
 }
 
-@media(min-width: 968px) {
+.parallax-container .section {
+    width: 100%;
+}
+
+@media(min-width: 922px) {
   .parallax-container {
     min-height: 480px;
   }
 }
 
+@media(max-width: 922px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
 /* About */
 .about-header {
-  min-height: 550px;  
-  background: url('../images/sobre-img.jpg');  
+  min-height: 550px;
+  background: url('../images/sobre-img.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
