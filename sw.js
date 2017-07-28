@@ -1,13 +1,16 @@
-let cacheName = 'femugpe-wpa-2';
+let cacheName = 'femugpe-wpa-1-3';
 let filesToCache = [
   '/',
   'index.html',
   'sobre.html',
   'pagamento.html',
   'images/femugpe-10.jpg',
-  'images/femugpe-logo.png',
-  'images/icon.png',
   'images/sobre-img.jpg',
+  'images/femugpe-logo.png',
+  'images/touch/icon.png',
+  'images/touch/apple-touch-icon.png',
+  'images/touch/icon-128x128.png',
+  'images/touch/ms-touch-icon-144x144-precomposed.png',
   'manifest.json',
   'appcache.manifest',
   'js/jquery.min.js',
@@ -16,6 +19,7 @@ let filesToCache = [
   'js/pushnotification.js',
   'js/pushnotification.js',
   'js/materialize.min.js',
+  'js/effects.js',
   'css/materialize.min.css',
   'css/material.css',
   'css/styles.css',
@@ -32,6 +36,13 @@ let filesToCache = [
   'fonts/roboto/Roboto-Thin.woff2',
 ];
 
+// dev only
+if (typeof files == 'undefined') {
+  var files = [];
+} else {
+  files.push('./');
+}
+
 self.addEventListener('install', e => {
   console.log('[ServiceWorker]: instalado');
   e.waitUntil(
@@ -46,6 +57,7 @@ self.addEventListener('activate', e => {
   e.waitUntil(
     caches.keys()
     .then(keyList => Promise.all(keyList.map(key => {
+      console.log(key, cacheName);
       if(key !== cacheName) {
         console.log('[ServiceWorker] Removing old cache', key);
         return caches.delete(key);
