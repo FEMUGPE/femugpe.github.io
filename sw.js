@@ -1,4 +1,4 @@
-let cacheName = 'femugpe-wpa-v2';
+let cacheName = 'femugpe-wpa-v2.0.0';
 let filesToCache = [
   '/',
   'index.html',
@@ -36,22 +36,6 @@ let filesToCache = [
   'fonts/roboto/Roboto-Thin.woff2',
 ];
 
-//Instala no serviceWorker os arquivos que ficaram no cache
-self.addEventListener('install', event => {
-  console.log('[ServiceWorker] Install');
-  event.waitUntil(
-    caches.open(cacheName)
-    .then(cache => {
-      console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(filesToCache);
-    })
-    .then(() => {
-      return self.skipWaiting();
-    })
-
-  );
-});
-
 //Trata os arquivos em caches que foram modificados e assim 
 self.addEventListener('activate', event => {
   console.log('[ServiceWorker] Activate');
@@ -68,6 +52,26 @@ self.addEventListener('activate', event => {
   //Lista dos os eventos de fetch da página
   return self.clients.claim();
 });
+
+//Instala no serviceWorker os arquivos que ficaram no cache
+self.addEventListener('install', event => {
+  console.log('[ServiceWorker] Install');
+  event.waitUntil(
+    caches.open(cacheName).then(cache => {
+      console.log('[ServiceWorker] Caching app shell');
+      return Promise.all(
+        filesToCache.map(function(files) {
+          return cache.add(files);
+        })
+      );
+    })
+    .then(() => {
+      return self.skipWaiting();
+    })
+
+  );
+});
+
 
 //Aqui é que tudo acontece você consegue tratar qualquer requiste mesmo sendo de outra origin
 //Com o evento feth pode dizer qual tipo de resposte, se vai ser do cache ou da network
