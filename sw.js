@@ -1,11 +1,14 @@
-let cacheName = 'femugpe-wpa-v2.0.0';
+let cacheName = 'femugpe-wpa-v2.1.1';
 let filesToCache = [
   '/',
   'index.html',
   'sobre.html',
-  'pagamento.html',
+  'submissao.html',
+  'guidelines.html',
+  'talks/femugpe-1/index.html',
   'images/femugpe-10.jpg',
   'images/sobre-img.jpg',
+  'images/default-banner.png',
   'images/femugpe-logo.png',
   'images/touch/icon.png',
   'images/touch/apple-touch-icon.png',

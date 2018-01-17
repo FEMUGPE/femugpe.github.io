@@ -10,6 +10,11 @@ p {
   line-height: 2rem;
 }
 
+.text-z-depth-2 {
+  -webkit-text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+}
+
 /* Home */
 .parallax-container {
   min-height: 380px;
@@ -53,8 +58,8 @@ p {
 
 /* About */
 .about-header {
-  min-height: 550px;
-  background: url('../images/sobre-img.jpg');
+  min-height: 450px;
+  background: url('../images/default-banner.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
