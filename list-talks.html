@@ -1,8 +1,127 @@
-<html>
-  <head><title>Pagina página para lista as talks</title></head>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" manifest="appcache.manifest"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FEMUGPE Front-end Meetup Group Pernambuco</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Import Google Icon Font-->
+    <link href="css/material.css" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/styles.css"/>
+
+    <!-- Manifest config pwa -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/touch/icon.png">
+    <meta name="theme-color" content="#2196F3">
+
+     <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Shopping">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon-precomposed" href="images/touch/icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#2196F3">
+
+    <script>
+    if (window.location.protocol != "https:" && window.location.hostname == "femugpe.github.io")
+        window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+    </script>
+  </head>
   <body>
-	  <h1>Página com as lista de  talks dos eventos aqui.</h1>
-	  <p>Seguir o padrão do site utilizando o materialize CSS</p>
-	  <p>Utilize tecnicas de PWA, se não sabe não faça merda e chame quem sabe para dizer como fazer</p>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="current-page">
+      <main>
+    <nav class="blue" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="index.html" class="brand-logo">FEMUGPE</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="guidelines.html">Guidelines</a></li>
+          <li><a href="submissao.html">Submissão</a></li>
+        </ul>
+        <ul id="nav-mobile" class="side-nav" style="transform: translateX(0px);">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="guidelines.html">Guidelines</a></li>
+          <li><a href="submissao.html">Submissão</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+    <div class="container">
+      <header><h3>Lista dos FEMUGPE`s</h3></header>
+      <article class="section">
+        <h3><a class="black-text" href="#">FEMUGPE #9</a></h3>
+        <p>Veja o que ocorreu no FEMGUPE #9 em recife.</p>
+        <a href="#" class="chip">Acessar evento</a>
+      </article>
+      <div class="divider"></div>
+      <article class="section">
+        <h3><a class="black-text" href="#">FEMUGPE #9</a></h3>
+        <p>Veja o que ocorreu no FEMGUPE #9 em recife.</p>
+        <a href="#" class="chip">Acessar evento</a>
+      </article>
+      <div class="divider"></div>
+      <article class="section">
+        <h3><a class="black-text" href="#">FEMUGPE #9</a></h3>
+        <p>Veja o que ocorreu no FEMGUPE #9 em recife.</p>
+        <a href="#" class="chip">Acessar evento</a>
+      </article>
+      <div class="divider"></div>
+      <article class="section">
+        <h3><a class="black-text" href="#">FEMUGPE #9</a></h3>
+        <p>Veja o que ocorreu no FEMGUPE #9 em recife.</p>
+        <a href="#" class="chip">Acessar evento</a>
+      </article>
+    </div>
+
+    <footer class="page-footer black">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">FEMGU-PE</h5>
+                <p class="grey-text text-lighten-4">Front-end Meetup Group Pernambuco.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="sobre.html">Sobre</a></li>
+                  <li><a class="grey-text text-lighten-3" href="submissao.html">Pagamento</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2015-2017 Copyright FEMGU-PE
+            <a class="grey-text text-lighten-4 right" href="#!">Develop Community PWA</a>
+            </div>
+          </div>
+        </footer>
+      </main>
+  </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/spa.js"></script>
+  <script src="js/pushnotification.js"></script>
+  <script src="js/effects.js"></script>
   </body>
-<
+</html>
