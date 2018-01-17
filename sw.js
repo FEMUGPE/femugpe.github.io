@@ -1,4 +1,4 @@
-let cacheName = 'femugpe-wpa-v2.1.1';
+let cacheName = 'femugpe-wpa-v2.1.2';
 let filesToCache = [
   '/',
   'index.html',
