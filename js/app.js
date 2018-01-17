@@ -1,7 +1,6 @@
 (() => {
 
-  let app = {
-  };
+  let app = {};
 
   //Pagamento
   $('#form-pagamento').on('submit', sendPagamento);
