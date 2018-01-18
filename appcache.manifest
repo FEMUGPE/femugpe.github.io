@@ -1,6 +1,5 @@
 CACHE MANIFEST
 
-
 CACHE:
 ./files.json
 ./index.html
@@ -29,7 +28,6 @@ CACHE:
 ./fonts/roboto/Roboto-Regular.woff2
 ./fonts/roboto/Roboto-Thin.woff
 ./fonts/roboto/Roboto-Thin.woff2
-
 
 NETWORK:
 *
