@@ -4,8 +4,10 @@ CACHE:
 ./files.json
 ./index.html
 ./sobre.html
+./organizadores.html
 ./submissao.html
 ./images/femugpe-10.jpg
+./images/femugpe-10.png
 ./images/femugpe-logo.png
 ./images/sobre-img.jpg
 ./manifest.json
