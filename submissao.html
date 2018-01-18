@@ -51,12 +51,14 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="guidelines.html">Guidelines</a></li>
+          <li><a href="organizadores.html">Organizadores</a></li>
           <li><a href="submissao.html">Submissão</a></li>
         </ul>
         <ul id="nav-mobile" class="side-nav" style="transform: translateX(0px);">
           <li><a href="index.html">Home</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="guidelines.html">Guidelines</a></li>
+          <li><a href="organizadores.html">Organizadores</a></li>
           <li><a href="submissao.html">Submissão</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -71,19 +73,52 @@
         <form class="col s12" method="POST" id="form-pagamento">
           <div class="row">
             <div class="input-field col s6">
-              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-              <label for="Nome">Nome Completo</label>
+              <input placeholder="Nome do palestrante" id="first_name" type="text" class="validate">
+              <label for="nome">Nome Completo</label>
             </div>
             <div class="input-field col s6">
-              <input id="email" type="email" class="validate">
+              <input id="email" placeholder="Seu e-mail para contato" type="email" class="validate">
               <label for="email">Email</label>
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s12">
-              <input id="titulo_palestra" type="text" class="validate">
+            <div class="input-field col s6">
+              <input id="titulo_palestra" placeholder="Descreve o título" type="text" class="validate">
               <label for="titulo_palestra">Título da Palestra</label>
             </div>
+            <div class="input-field col s6">
+              <input placeholder="O que você gostaria de compartilhar com a gente?" id="compartilhar" type="text" class="validate">
+              <label for="compartilhar">Compartilhar</label>
+            </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s12">
+                  <textarea
+                    id="descrever"
+                    class="materialize-textarea">
+                  </textarea>
+                  <label for="descrever">
+                    Descreve aqui em umas 3 ou 5 linhas o que você deseja apresentar
+                  </label>
+              </div>
+              <div class="input-field col s12">
+                  <textarea
+                    id="bio"
+                    class="materialize-textarea">
+                  </textarea>
+                  <label for="bio">
+                      Fala um pouquinho sobre você, é só uma pequena BIO pra gente adicionar na publicação do evento
+                  </label>
+              </div>
+              <div class="input-field col s12">
+                  <textarea
+                    id="foto_divulgacao"
+                    class="materialize-textarea">
+                  </textarea>
+                  <label for="foto_divulgacao">
+                    Deixe uma URL com a sua foto para utilizarmos na divulgação do evento
+                  </label>
+              </div>
           </div>
           <div class="row">
             <div class="col s6 offset-s6">
@@ -94,7 +129,7 @@
       </div>
     </div>
 
-    <footer class="page-footer black">
+    <footer class="page-footer footer-custom black">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
@@ -114,7 +149,7 @@
           <div class="footer-copyright">
             <div class="container">
             © 2015-2017 Copyright FEMGU-PE
-            <a class="grey-text text-lighten-4 right" href="#!">Develop Community</a>
+            <a class="grey-text text-lighten-4 right" href="#!">Develop Community FEMGUPE</a>
             </div>
           </div>
         </footer>
