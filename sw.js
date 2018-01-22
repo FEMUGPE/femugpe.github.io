@@ -1,5 +1,5 @@
-let cacheName = 'femugpe-wpa-v2.3.0';
-let filesToCache = [
+const cacheName = 'femugpe-wpa-v2.3.0';
+const filesToCache = [
   '/',
   'index.html',
   'sobre.html',

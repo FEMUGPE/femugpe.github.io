@@ -1,0 +1,35 @@
+{
+  "name": "femugpe-pwa",
+  "version": "1.0.0",
+  "description": "Website progressive web app at FEMUGPE",
+  "main": "index.js",
+  "scripts": {
+    "dev":"NODE_ENV=development babel-node index.js",
+    "build":"rm -rf ./dist/ && babel src --out-dir dist/ --copy-files",
+    "prod":"NODE_ENV=production node /dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FEMUGPE/femugpe.github.io.git"
+  },
+  "keywords": [
+    "PWA",
+    "App",
+    "progressive"
+  ],
+  "author": "Jeftar Mascarenhas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FEMUGPE/femugpe.github.io/issues"
+  },
+  "homepage": "https://github.com/FEMUGPE/femugpe.github.io#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
